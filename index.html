@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./util.js" ></script>
+    <title>Hunting Words Generator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="table">
+
+        </div>
+        <div class="wordsToSearch">
+                   
+        </div>
+        <div class="setUpHW">
+            <h1>Genarate Hunting Words</h1>
+            <label for="words">Words to hide: <br/> ( Separate words with comma )</label>
+            <textarea name="words" rows="4" cols="50" maxlength="90" class="words">
+
+            </textarea>
+            <button onclick="GenerateHW()">
+                Generate
+            </button>
+        </div>
+    </div>
+    <div class="sideMenu">
+        <button onclick="ShowSetUpScreen()"><img src="./res/new.png"></button>
+        <button onclick="GeneratePDF()"><img src="./res/download.png"></button>
+    </div>
+    <script src="./main.js" ></script>
+    <script>
+        function GeneratePDF(){
+            var element = document.getElementsByClassName('container')[0];
+            //html2pdf(element);
+            var opt = {
+            margin:       1,
+            filename:     'huntingwords.pdf',
+            image:        { type: 'jpeg', quality: 1 },
+            html2canvas:  { scale: 2 },
+            jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+
+            // New Promise-based usage:
+            html2pdf().set(opt).from(element).save()
+        }
+    </script>
+</body>
+</html>

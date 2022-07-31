@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+body{
+    position: relative;
+    background-color: #F6F1DD;
+}
+.container{
+    width: fit-content;
+    min-height: 30rem;
+    block-size: fit-content;
+    margin: 0rem auto;
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.table{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0 1.25rem 0;
+}
+.table > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.table > div > p{
+    font-size: 1rem;
+    font-weight: 500;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #999;
+    color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wordsToSearch{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: safe;
+    align-items: center;
+    margin: 0rem auto;
+    width: 30rem;
+}
+.wordsToSearch > p{
+    display: flex;
+    width: 25%;
+    text-transform: capitalize;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+}
+.sideMenu{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 0.25rem;
+    width: 5rem;
+    right: calc(50% - 2.5rem);
+}
+.sideMenu button{
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+.sideMenu button:hover{
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.35s;
+}
+.sideMenu button > img{
+    width: 2rem;
+    height: auto;
+}
+.setUpHW{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 80%;
+    background-color: #F6F1DD;
+    color: #3E5932;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.setUpHW h1{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.setUpHW textarea{
+    padding-left: 2rem;
+    padding-top: 2rem;
+    width: 100%;
+    max-width: 25rem;
+    text-align: left;
+}
+.setUpHW label{
+    margin-bottom: 0.5rem;
+    text-align:center;
+}
+.setUpHW button{
+    padding: 0.75rem;
+    background-color: #F6F1DD;
+    color: #3E5932;
+    text-transform: uppercase;
+    outline-color: #3E5932;
+    border:1px solid #3E5932;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    transition: all 0.2s;
+}
+.setUpHW button:active{
+    background-color: #2e4226;
+    color:#F6F1DD;
+}
+.setUpHW button:hover{
+    cursor: pointer;
+    background-color: #3E5932;
+    color:#F6F1DD;
+}
+.hide{
+    display: none;
+}
+@media only screen and (max-width: 500px) {
+    .table{
+        padding: 1.5rem 0 0.75rem 0;
+    }
+    .table > div > p{
+        font-size: 0.9rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .wordsToSearch{
+        width: 20rem;
+    }
+}
