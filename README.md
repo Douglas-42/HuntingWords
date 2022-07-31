@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.imgur.com/eW7iOcr.png" width="200px" height="auto" />
+  <img src="https://i.imgur.com/8NG8JBC.png" width="200px" height="auto" />
 </p>
 <h1>Hunting Words Generator</h1>
 <p align="center" >
